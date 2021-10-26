@@ -11,6 +11,7 @@ mod day10;
 mod day11;
 mod day12;
 mod day13;
+mod day14;
 
 /// Solve function
 ///
@@ -47,6 +48,7 @@ pub fn solve(day: u32, part: u32) -> i64 {
         11 => day11::solve(part, &input, &example),
         12 => day12::solve(part, &input_vec, &example_vec),
         13 => day13::solve(part, &input, &example),
+        14 => day14::solve(part, &input_vec, &example_vec),
         _ => panic!("Unknown day, please input valid day"),
     };
 
@@ -134,5 +136,10 @@ mod tests {
     fn test_day13() {
         assert_eq!(solve(13, 1), 156);
         assert_eq!(solve(13, 2), 404517869995362);
+    }
+    #[test]
+    fn test_day14() {
+        assert_eq!(solve(14, 1), 6631883285184);
+        assert_eq!(solve(14, 2), 3161838538691);
     }
 }
