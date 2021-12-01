@@ -13,6 +13,7 @@ mod day12;
 mod day13;
 mod day14;
 mod day15;
+mod day16;
 
 /// Solve function
 ///
@@ -51,6 +52,7 @@ pub fn solve(day: u32, part: u32) -> i64 {
         13 => day13::solve(part, &input, &example),
         14 => day14::solve(part, &input_vec, &example_vec),
         15 => day15::solve(part, &input, &example),
+        16 => day16::solve(part, &string_to_str_group_vec(&input), &string_to_str_group_vec(&example)),
         _ => panic!("Unknown day, please input valid day"),
     };
 
@@ -68,6 +70,10 @@ fn string_to_str_vec(input: &String) -> Vec<&str> {
     input.lines().filter_map(|s| match s {
         ""=>None,
         _=>Some(s),}).collect()
+}
+
+fn string_to_str_group_vec(input: &String) -> Vec<&str> {
+    input.split("\n\n").collect::<Vec<&str>>()
 }
 
 #[cfg(test)]
@@ -145,7 +151,7 @@ mod tests {
         assert_eq!(solve(14, 2), 3161838538691);
     }
     #[test]
-    fn test_day14() {
+    fn test_day15() {
         assert_eq!(solve(15, 1), 614);
         //My solution for part 2 is to slow :( 
         //assert_eq!(solve(15, 2), 1065);

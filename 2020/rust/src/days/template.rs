@@ -17,11 +17,13 @@ pub fn solve(part: u32, input: &str, sample: &str) -> i64 {
 //fn part1(data: &Vec<&str>) -> i64 {
 fn part1(data: &Vec<&i64>) -> i64 {
 
+    0
 }
 
 //fn part2(data: &str) -> i64 {
 //fn part2(data: &Vec<&str>) -> i64 {
 fn part2(data: &Vec<&i64>) -> i64 {
 
+    0
 }
 
