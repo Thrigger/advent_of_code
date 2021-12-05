@@ -1,18 +1,9 @@
-
-# \n
-#inputs = open("../inputs/examples/d05.txt").read().strip().split("\n")
 inputs = open("../inputs/d05.txt").read().strip().split("\n")
-# ,
-#inputs = open("../inputs/examples/d05.txt").read().strip().split(" -> ")
-#inputs = open("../inputs/d05.txt").read().strip().split("\n")
-
 
 size = 1000
 vent = [[0 for i in range(size)] for j in range(size)]
-#print(inputs)
 for line in inputs:
     (start, stop) = line.split(" -> ")
-
     start_x, start_y = start.split(",")
     stop_x, stop_y = stop.split(",")
 
@@ -49,26 +40,10 @@ for line in inputs:
             else:
                 for delta_x,delta_y in zip(range(start_x, stop_x-1, -1), range(start_y, stop_y-1, -1)):
                     vent[delta_x][delta_y] += 1
-            
-
     
 res=0
-res2=0
 for row in vent:
-    res2 += row.count(0)
-    res2 += row.count(1)
-#print(100 - res2)
-print(1000000 - res2)
-print(res)
-
-
-
-
-
-
-
-
-
-
-
+    res += row.count(0)
+    res += row.count(1)
+print(1000000 - res)
 
