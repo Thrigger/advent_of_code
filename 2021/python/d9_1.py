@@ -1,4 +1,4 @@
-inputs = open("../inputs/examples/d10.txt").read().strip().split("\n")
+inputs = open("../inputs/d09.txt").read().strip().split("\n")
 
 def isLowPoint(tab, x, y):
     if x > 0: 
