@@ -1,5 +1,6 @@
 mod day01;
 mod day02;
+mod day03;
 
 /// Solve function
 ///
@@ -24,6 +25,7 @@ pub fn solve(day: u32, part: u32) -> i64 {
     let result = match day {
         1  => day01::solve(part, &input_ints, &ex_input_ints),
         2  => day02::solve(part, &input_strs, &ex_input_strs),
+        3  => day03::solve(part, &input_strs, &ex_input_strs),
         _ => panic!("Unknown day, please input valid day"),
     };
 
@@ -61,4 +63,10 @@ mod tests {
         assert_eq!(solve(2, 1), 1840243);
         assert_eq!(solve(2, 2), 1727785422);
     }
+    #[test]
+    fn test_day03() {
+        assert_eq!(solve(3, 1), 2583164);
+        assert_eq!(solve(3, 2), 2784375);
+    }
 }
+
