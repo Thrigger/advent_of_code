@@ -1,4 +1,3 @@
-use thrigger_support::data_conversion::binary_to_u32;
 pub fn solve(part: u32, input: &Vec<&str>, sample: &Vec<&str>) -> i64 {
     assert_eq!(part1(&sample), 150, "Error, sample problem is not solved");
     assert_eq!(part2(&sample), 900, "Error, sample problem is not solved");
