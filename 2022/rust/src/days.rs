@@ -1,4 +1,5 @@
 mod day01;
+mod day02;
 
 /// Solve function
 ///
@@ -32,6 +33,10 @@ pub fn solve(day: u32, part: u32) -> i64 {
 
     let result = match day {
         1  => day01::solve(part, &input_str_group, &ex_input_str_group),
+        2  => day02::solve(part, &input_strs, &ex_input_strs),
+        //3  => day03::solve(part, &input_ints, &ex_input_ints),
+        //3  => day03::solve(part, &input_strs, &ex_input_strs),
+        //3  => day03::solve(part, &input_str_group, &ex_input_str_group),
         _ => panic!("Unknown day, please input valid day"),
     };
 
@@ -58,6 +63,12 @@ fn string_to_str_groups(input: &str) -> Vec<&str> {
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    #[test]
+    fn test_day02() {
+        assert_eq!(solve(2, 1), 12679);
+        assert_eq!(solve(2, 2), 14470);
+    }
 
     #[test]
     fn test_day01() {
