@@ -53,7 +53,7 @@ fn part1(data: &Vec<&str>) -> i64 {
             "C" => 2,
             _ => panic!(),
         };
-        let mut my = match values[1] {
+        let my = match values[1] {
             "X" => 0,
             "Y" => 1,
             "Z" => 2,
