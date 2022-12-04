@@ -1,6 +1,7 @@
 mod day01;
 mod day02;
 mod day03;
+mod day04;
 
 /// Solve function
 ///
@@ -36,9 +37,10 @@ pub fn solve(day: u32, part: u32) -> i64 {
         1  => day01::solve(part, &input_str_group, &ex_input_str_group),
         2  => day02::solve(part, &input_strs, &ex_input_strs),
         3  => day03::solve(part, &input_strs, &ex_input_strs),
-        //4  => day04::solve(part, &input_ints, &ex_input_ints),
-        //4  => day04::solve(part, &input_strs, &ex_input_strs),
-        //4  => day04::solve(part, &input_str_group, &ex_input_str_group),
+        4  => day04::solve(part, &input_strs, &ex_input_strs),
+        //5  => day04::solve(part, &input_ints, &ex_input_ints),
+        //5  => day04::solve(part, &input_strs, &ex_input_strs),
+        //5  => day04::solve(part, &input_str_group, &ex_input_str_group),
         _ => panic!("Unknown day, please input valid day"),
     };
 
@@ -65,6 +67,12 @@ fn string_to_str_groups(input: &str) -> Vec<&str> {
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    #[test]
+    fn test_day04() {
+        assert_eq!(solve(4, 1), 657);
+        assert_eq!(solve(4, 2), 938);
+    }
 
     #[test]
     fn test_day03() {
