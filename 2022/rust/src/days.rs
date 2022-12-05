@@ -2,6 +2,7 @@ mod day01;
 mod day02;
 mod day03;
 mod day04;
+mod day05;
 
 /// Solve function
 ///
@@ -38,6 +39,7 @@ pub fn solve(day: u32, part: u32) -> i64 {
         2  => day02::solve(part, &input_strs, &ex_input_strs),
         3  => day03::solve(part, &input_strs, &ex_input_strs),
         4  => day04::solve(part, &input_strs, &ex_input_strs),
+        5  => day05::solve(part, &input_str_group, &ex_input_str_group),
         //5  => day04::solve(part, &input_ints, &ex_input_ints),
         //5  => day04::solve(part, &input_strs, &ex_input_strs),
         //5  => day04::solve(part, &input_str_group, &ex_input_str_group),
