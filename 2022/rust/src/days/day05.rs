@@ -1,4 +1,4 @@
-pub fn solve(part: u32, input: &Vec<&str>, sample: &Vec<&str>) -> i64 {
+pub fn solve(part: u32, input: &Vec<&str>, _sample: &Vec<&str>) -> i64 {
     match part {
         1 => part1(&input),
         2 => part2(&input),
@@ -21,7 +21,7 @@ fn part2(data: &Vec<&str>) -> i64 {
                     _     => None,
                 }).collect();
 
-                let mut tmp_map: &mut Vec<&str> = &mut map[parts[1]-1];
+                let tmp_map: &mut Vec<&str> = &mut map[parts[1]-1];
                 let offset = tmp_map.len()-parts[0];
                 let mut drained_map: &mut Vec<&str> = &mut tmp_map.drain(offset..).collect();
                 map[parts[2]-1].append(&mut drained_map);
@@ -37,7 +37,7 @@ fn part2(data: &Vec<&str>) -> i64 {
 }
 
 fn setup(group: &str) -> Vec<Vec<&str>> {
-    let mut lines: Vec<&str> = group.lines().collect();
+    let lines: Vec<&str> = group.lines().collect();
     let mut elements = 0;
     let mut map = vec![];
 
@@ -82,7 +82,7 @@ fn part1(data: &Vec<&str>) -> i64 {
                     _     => None,
                 }).collect();
 
-                let mut tmp_map: &mut Vec<&str> = &mut map[parts[1]-1];
+                let tmp_map: &mut Vec<&str> = &mut map[parts[1]-1];
                 let offset = tmp_map.len()-parts[0];
                 let mut drained_map: &mut Vec<&str> = &mut tmp_map.drain(offset..).collect();
                 drained_map.reverse();
