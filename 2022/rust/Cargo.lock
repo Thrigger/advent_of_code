@@ -5,3 +5,11 @@ version = 3
 [[package]]
 name = "aoc_rust"
 version = "0.1.0"
+dependencies = [
+ "thrigger_support",
+]
+
+[[package]]
+name = "thrigger_support"
+version = "0.3.2"
+source = "git+https://github.com/Thrigger/thrigger_support?branch=main#8e8f7a7fd7743406f512396bc11947106d0a0ab9"

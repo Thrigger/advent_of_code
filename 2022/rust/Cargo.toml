@@ -1,8 +1,10 @@
 [package]
 name = "aoc_rust"
 version = "0.1.0"
+authors = ["Thrigger <21341498+Thrigger@users.noreply.github.com>"]
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+thrigger_support = { git = "https://github.com/Thrigger/thrigger_support", version = "0.3.2", branch = "main" }
