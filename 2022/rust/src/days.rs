@@ -7,6 +7,7 @@ mod day06;
 mod day07;
 mod day08;
 mod day09;
+mod day25;
 
 /// Solve function
 ///
@@ -48,6 +49,7 @@ pub fn solve(day: u32, part: u32) -> i64 {
         7  => day07::solve(part, &input_strs, &ex_input_strs),
         8  => day08::solve(part, &input_strs, &ex_input_strs),
         9  => day09::solve(part, &input_strs, &ex_input_strs),
+        25 => day25::solve(part, &input_strs, &ex_input_strs),
         //10  => day10::solve(part, &input_strs, &ex_input_strs),
         //10  => day10::solve(part, &input_str_group, &ex_input_str_group),
         //10  => day10::solve(part, &input_strs, &ex_input_strs),
@@ -80,6 +82,11 @@ fn string_to_str_groups(input: &str) -> Vec<&str> {
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    #[test]
+    fn test_day25() {
+        assert_eq!(solve(25, 1), 35951702021395);
+    }
 
     #[test]
     fn test_day09() {
