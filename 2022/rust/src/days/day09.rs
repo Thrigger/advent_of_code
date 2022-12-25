@@ -22,7 +22,7 @@ fn part1_2(data: &Vec<&str>, len: usize) -> i64 {
 
     for line in data {
         let parts: Vec<&str> = line.split(" ").collect();
-        let mut dir: &str = parts[0];
+        let dir: &str = parts[0];
         let val: i64 = parts[1].parse().unwrap();
 
         for _ in 0..val {
