@@ -8,6 +8,7 @@ mod day07;
 mod day08;
 mod day09;
 mod day10;
+mod day11;
 mod day25;
 
 /// Solve function
@@ -51,6 +52,7 @@ pub fn solve(day: u32, part: u32) -> i64 {
         8  => day08::solve(part, &input_strs, &ex_input_strs),
         9  => day09::solve(part, &input_strs, &ex_input_strs),
         10 => day10::solve(part, &input_strs, &ex_input_strs),
+        11 => day11::solve(part, &input_str_group, &ex_input_str_group),
         25 => day25::solve(part, &input_strs, &ex_input_strs),
         //10  => day10::solve(part, &input_strs, &ex_input_strs),
         //10  => day10::solve(part, &input_str_group, &ex_input_str_group),
@@ -91,12 +93,17 @@ mod tests {
     }
 
     #[test]
+    fn test_day11() {
+        assert_eq!(solve(11, 1), 51075);
+        assert_eq!(solve(11, 2), 11741456163);
+    }
+
+    #[test]
     fn test_day10() {
         assert_eq!(solve(10, 1), 14540);
         assert_eq!(solve(10, 2), 1337);
     }
 
-    #[test]
     #[test]
     fn test_day09() {
         assert_eq!(solve(9, 1), 6470);
