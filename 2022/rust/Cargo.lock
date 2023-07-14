@@ -11,5 +11,5 @@ dependencies = [
 
 [[package]]
 name = "thrigger_support"
-version = "0.3.2"
-source = "git+https://github.com/Thrigger/thrigger_support?branch=main#8e8f7a7fd7743406f512396bc11947106d0a0ab9"
+version = "0.3.4"
+source = "git+https://github.com/Thrigger/thrigger_support?branch=main#9314fa728daa99f3b8603e402c83a778fa1d913d"

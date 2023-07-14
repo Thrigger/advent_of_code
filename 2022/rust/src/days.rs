@@ -9,6 +9,7 @@ mod day08;
 mod day09;
 mod day10;
 mod day11;
+mod day12;
 mod day25;
 
 /// Solve function
@@ -53,13 +54,11 @@ pub fn solve(day: u32, part: u32) -> i64 {
         9  => day09::solve(part, &input_strs, &ex_input_strs),
         10 => day10::solve(part, &input_strs, &ex_input_strs),
         11 => day11::solve(part, &input_str_group, &ex_input_str_group),
+        12 => day12::solve(part, &input_strs, &ex_input_strs),
         25 => day25::solve(part, &input_strs, &ex_input_strs),
-        //10  => day10::solve(part, &input_strs, &ex_input_strs),
-        //10  => day10::solve(part, &input_str_group, &ex_input_str_group),
-        //10  => day10::solve(part, &input_strs, &ex_input_strs),
-        //11  => day11::solve(part, &input_str_group, &ex_input_str_group),
-        //11  => day11::solve(part, &input_ints, &ex_input_ints),
-        //11  => day11::solve(part, &input_ints, &ex_input_ints),
+        //11 => day11::solve(part, &input_str_group, &ex_input_str_group),
+        //11 => day11::solve(part, &input_ints, &ex_input_ints),
+        //11 => day11::solve(part, &input_ints, &ex_input_ints),
         _ => panic!("Unknown day, please input valid day"),
     };
 
