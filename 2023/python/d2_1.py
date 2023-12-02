@@ -5,28 +5,24 @@ res = 0
 for line in inputs:
     game_id, hands = line.split(": ")
     _, game_id = game_id.split(" ")
-    hands = hands.split("; ")
+    hands= hands.split("; ")
     ok = True
-    red=0
-    green=0
-    blue=0
 
     for hand in hands:
         types = hand.split(", ")
         for each in types:
             numb, color = each.split(" ")
-            numb = int(numb)
             if color == "red":
-                if numb > red:
-                    red = numb
+                if int(numb) > 12:
+                    ok = False
             elif color == "green":
-                if numb > green:
-                    green = numb
+                if int(numb) > 13:
+                    ok = False
             elif color == "blue":
-                if numb > blue:
-                    blue = numb
+                if int(numb) > 14:
+                    ok = False
     if ok:
-        res += int(red*green*blue)
+        res += int(game_id)
 
 print(res)
 
