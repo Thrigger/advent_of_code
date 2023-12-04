@@ -16,4 +16,5 @@ print(res)
 #sorted(vec)   <- small to big
 #print(vec)
 #print(vec[0])
+#list(set(some_list) & set(some_other_list))    <-- check overlapping
 
