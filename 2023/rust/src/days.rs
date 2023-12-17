@@ -1,4 +1,5 @@
 mod day01;
+mod day05;
 
 /// Solve function
 ///
@@ -34,6 +35,7 @@ pub fn solve(day: u32, part: u32) -> i64 {
         1  => day01::solve(part, &input_str_group, &ex_input_str_group),
         //1 => day01::solve(part, &input_ints, &ex_input_ints),
         //1 => day01::solve(part, &input_ints, &ex_input_ints),
+        5 => day05::solve(part, &input_str_group, &ex_input_str_group),
         //11 => day11::solve(part, &input_str_group, &ex_input_str_group),
         //11 => day11::solve(part, &input_ints, &ex_input_ints),
         //11 => day11::solve(part, &input_ints, &ex_input_ints),
@@ -65,69 +67,9 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_day25() {
-        assert_eq!(solve(25, 1), 35951702021395);
-    }
-
-    #[test]
-    fn test_day11() {
-        assert_eq!(solve(11, 1), 51075);
-        assert_eq!(solve(11, 2), 11741456163);
-    }
-
-    #[test]
-    fn test_day10() {
-        assert_eq!(solve(10, 1), 14540);
-        assert_eq!(solve(10, 2), 1337);
-    }
-
-    #[test]
-    fn test_day09() {
-        assert_eq!(solve(9, 1), 6470);
-        assert_eq!(solve(9, 2), 2658);
-    }
-
-    #[test]
-    fn test_day08() {
-        assert_eq!(solve(8, 1), 1803);
-        assert_eq!(solve(8, 2), 268912);
-    }
-
-    #[test]
-    fn test_day06() {
-        assert_eq!(solve(6, 1), 1578);
-        assert_eq!(solve(6, 2), 2178);
-    }
-
-    #[test]
     fn test_day05() {
-        /* Output is a printed string */
-        assert_eq!(solve(5, 1), 0);
-        assert_eq!(solve(5, 2), 0);
-    }
-
-    #[test]
-    fn test_day04() {
-        assert_eq!(solve(4, 1), 657);
-        assert_eq!(solve(4, 2), 938);
-    }
-
-    #[test]
-    fn test_day03() {
-        assert_eq!(solve(3, 1), 8493);
-        assert_eq!(solve(3, 2), 2552);
-    }
-
-    #[test]
-    fn test_day02() {
-        assert_eq!(solve(2, 1), 12679);
-        assert_eq!(solve(2, 2), 14470);
-    }
-
-    #[test]
-    fn test_day01() {
-        assert_eq!(solve(1, 1), 65912);
-        assert_eq!(solve(1, 2), 195625);
+        assert_eq!(solve(5, 1), 51752125);
+        //assert_eq!(solve(5, 2), 0);
     }
 }
 
