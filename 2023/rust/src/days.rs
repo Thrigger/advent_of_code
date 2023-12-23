@@ -1,4 +1,5 @@
 mod day01;
+mod day17;
 
 /// Solve function
 ///
@@ -32,10 +33,8 @@ pub fn solve(day: u32, part: u32) -> i64 {
 
     let result = match day {
         1  => day01::solve(part, &input_str_group, &ex_input_str_group),
-        //1 => day01::solve(part, &input_ints, &ex_input_ints),
-        //1 => day01::solve(part, &input_ints, &ex_input_ints),
+        17 => day17::solve(part, &input_strs, &ex_input_strs),
         //11 => day11::solve(part, &input_str_group, &ex_input_str_group),
-        //11 => day11::solve(part, &input_ints, &ex_input_ints),
         //11 => day11::solve(part, &input_ints, &ex_input_ints),
         _ => panic!("Unknown day, please input valid day"),
     };
