@@ -31,9 +31,7 @@ pub fn solve(day: u32, part: u32) -> i64 {
     let ex_input_str_group = string_to_str_groups(&ex_input_trimmed);
 
     let result = match day {
-        //01 => day01::solve(part, &input_strs, &ex_input_strs),
-        //01 => day01::solve(part, &input_str_group, &ex_input_str_group),
-        //01 => day01::solve(part, &input_ints, &ex_input_ints),
+        01 => day01::solve(part, &input_strs, &ex_input_strs),
 
         //11 => day11::solve(part, &input_strs, &ex_input_strs),
         //11 => day11::solve(part, &input_str_group, &ex_input_str_group),
@@ -67,8 +65,8 @@ mod tests {
 
     #[test]
     fn test_day01() {
-        assert_eq!(solve(1, 1), 54338);
-        assert_eq!(solve(1, 2), 53389);
+        assert_eq!(solve(1, 1), 2264607);
+        assert_eq!(solve(1, 2), 19457120);
     }
 }
 

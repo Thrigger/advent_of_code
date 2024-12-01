@@ -11,7 +11,7 @@ for line in inputs:
 left.sort()
 right.sort()
 
-for (l, r) in zip(left, right):
-    res += abs(l-r)
+for l in left:
+    res += l * right.count(l)
 
 print(res)

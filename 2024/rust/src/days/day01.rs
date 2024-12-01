@@ -1,7 +1,6 @@
 pub fn solve(part: u32, input: &Vec<&str>, sample: &Vec<&str>) -> i64 {
-//pub fn solve(part: u32, input: &Vec<i64>, sample: &Vec<i64>) -> i64 {
-    assert_eq!(part1(&sample), 0, "Error, sample problem is not solved");
-    //assert_eq!(part2(&sample), 0, "Error, sample problem is not solved");
+    assert_eq!(part1(&sample), 11, "Error, sample problem is not solved");
+    assert_eq!(part2(&sample), 31, "Error, sample problem is not solved");
 
     match part {
         1 => part1(&input),
@@ -10,26 +9,49 @@ pub fn solve(part: u32, input: &Vec<&str>, sample: &Vec<&str>) -> i64 {
     }
 }
 
+fn get_left_right(data: &Vec<&str>) -> (Vec<usize>, Vec<usize>) {
+    let mut left: Vec<usize>  = vec![];
+    let mut right: Vec<usize>  = vec![];
+
+    for line in data {
+        let parts: Vec<&str> = line.split("   ").collect();
+
+        left.push(parts[0].parse::<usize>().unwrap());
+        right.push(parts[1].parse::<usize>().unwrap());
+    }
+    
+    left.sort();
+    right.sort();
+    (left, right)
+}
+
 fn part2(data: &Vec<&str>) -> i64 {
-//fn part2(data: &Vec<i64>) -> i64 {
     let mut total = 0;
-    //data.iter().map(|i| fuel2(*i)).sum();
-    total
+
+    let (mut right, mut left) = get_left_right(data);
+
+    for each in left {
+        total += each * right.iter().filter(|r| **r == each).count();
+    }
+
+    total.try_into().unwrap()
 }
 
 fn part1(data: &Vec<&str>) -> i64 {
-//fn part1(data: &Vec<i64>) -> i64 {
     let mut total = 0;
 
-    for line in data {
-        // parse each line of each as a int. groups of strings -> ints
-        //let ints: Vec<i64> = line.lines().filter_map(|s| match s.parse::<i64>() {
-        //    Ok(i) => Some(i),
-        //    _     => None,
-        //}).collect();
-        println!("{}", line);
+    let (mut right, mut left) = get_left_right(data);
+
+    let mut i = 0;
+    while i < right.len() {
+        if left[i] > right[i] {
+            total += left[i] - right[i]
+        } else {
+            total += right[i] - left[i]
+        }
+        i += 1;
     }
-    
-    total
+
+    total.try_into().unwrap()
 }
 
