@@ -1,5 +1,5 @@
-inputs = open("../inputs/examples/d08.txt").read().strip().split("\n")
-#inputs = open("../inputs/d08.txt").read().strip().split("\n")
+inputs = open("../inputs/examples/d12.txt").read().strip().split("\n")
+#inputs = open("../inputs/d12.txt").read().strip().split("\n")
 
 res = 0
 for line in inputs:
